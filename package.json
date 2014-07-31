@@ -1,0 +1,18 @@
+{
+  "name": "attiny-common",
+  "version": "0.0.1",
+  "description": "A common library for Tessel's ATTiny based modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "attiny",
+    "common",
+    "ir",
+    "ambient",
+    "spi"
+  ],
+  "author": "jon@technical.io",
+  "license": "MIT"
+}
