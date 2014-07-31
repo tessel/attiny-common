@@ -23,6 +23,9 @@
     "tinytap": "^0.2.0",
     "async" : "~0.9.0"
   },
+  "hardware" : {
+    "test" : false
+  },
   "author": "jon@technical.io",
   "license": "MIT"
 }

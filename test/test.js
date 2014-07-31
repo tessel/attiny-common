@@ -13,18 +13,18 @@ var ambientTiny = new AttinyLib(tessel.port[ambientPort]);
 test.count(3);
 
 async.series([
-  // test('creating a new attiny', function(t) {
-  //   t.ok(irTiny, 'could not create the IR tiny object');
-  //   t.ok(ambientTiny, 'could not create the Ambient tiny object');
-  //   t.ok(irTiny.hardware, 'did not initialize hardware properties correctly');
-  //   t.end();
-  // }),
+  test('creating a new attiny', function(t) {
+    t.ok(irTiny, 'could not create the IR tiny object');
+    t.ok(ambientTiny, 'could not create the Ambient tiny object');
+    t.ok(irTiny.hardware, 'did not initialize hardware properties correctly');
+    t.end();
+  }),
 
   test('initializing the ir tiny', function(t) {
 
     var firmwareOptions = {
       firmwareFile : './test/infrared-attx4.hex',
-      firmwareVersion : 0x02,
+      firmwareVersion : 0x04,
       moduleID : 0x08,
       signature : 0x930C,
       crc : (0x52 << 8) | 0x88,
