@@ -16,7 +16,8 @@
     "spi"
   ],
   "dependencies" : {
-    "avr-isp": "~0.0.2"
+    "avr-isp": "~0.0.2",
+    "sync-queue" : "~0.0.1"
   },
   "devDependencies": {
     "tinytap": "^0.2.0",
