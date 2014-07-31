@@ -13,6 +13,9 @@
     "ambient",
     "spi"
   ],
+  "dependencies" : {
+    "avr-isp": "~0.0.2"
+  },
   "author": "jon@technical.io",
   "license": "MIT"
 }
