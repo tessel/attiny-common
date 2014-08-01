@@ -1,6 +1,6 @@
 {
   "name": "attiny-common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A common library for Tessel's ATTiny based modules",
   "main": "./lib/index.js",
   "scripts": {
