@@ -10,7 +10,7 @@ var ambientPort = process.argv[3] || 'B';
 var irTiny = new AttinyLib(tessel.port[irPort]);
 var ambientTiny = new AttinyLib(tessel.port[ambientPort]);
 
-test.count(3);
+test.count(5);
 
 async.series([
   test('creating a new attiny', function(t) {
@@ -24,15 +24,32 @@ async.series([
 
     var firmwareOptions = {
       firmwareFile : './test/infrared-attx4.hex',
-      firmwareVersion : 0x04,
+      firmwareVersion : 0x03,
       moduleID : 0x08,
       signature : 0x930C,
-      crc : (0x52 << 8) | 0x88,
-    }
+      crc : 13777,
+    } 
 
     irTiny.initialize(firmwareOptions, function(err) {
       console.log('err', err);
       t.equal(err, undefined, 'error thrown on valid initialization');
+      t.end();
+    });
+  }),
+
+  test('initializing the tiny with no module plugged in', function(t) {
+
+    var noTiny = new AttinyLib(tessel.port['D']);
+    var firmwareOptions = {
+      firmwareFile : './test/infrared-attx4.hex',
+      firmwareVersion : 0x03,
+      moduleID : 0x08,
+      signature : 0x930C,
+      crc : 13777,
+    } 
+
+    noTiny.initialize(firmwareOptions, function(err) {
+      t.ok(err, 'error not thrown on invalid initialization');
       t.end();
     });
   }),
