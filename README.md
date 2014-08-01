@@ -13,6 +13,7 @@ This library is designed to encapsulate all of the shared behavior of Tessel's `
 
 ## Usage
 
+```.js
 var Attiny = require('attiny-common');
 
 // Create a new tiny agent
@@ -37,3 +38,4 @@ attiny.initialize(firmwareOptions, function(err) {
 function irqHit() {
   console.log("IRQ is active");
 }
+```
