@@ -1,6 +1,6 @@
 {
   "name": "attiny-common",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A common library for Tessel's ATTiny based modules",
   "main": "./lib/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "spi"
   ],
   "dependencies" : {
-    "avr-isp": "0.0.4",
+    "avr-isp": "0.0.5",
     "sync-queue" : "~0.0.1"
   },
   "devDependencies": {
