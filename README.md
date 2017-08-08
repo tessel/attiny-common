@@ -1,5 +1,7 @@
 Attiny-common
 -----------------
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tessel/attiny-common.svg)](https://greenkeeper.io/)
 This library is designed to encapsulate all of the shared behavior of Tessel's `attiny-attx4` and `ir-attx4` libraries. They share much of the same hardware design so most of the non-domain specific logic can be abstracted out. These features include:
 
 * Initilization
